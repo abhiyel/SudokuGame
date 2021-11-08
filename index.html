@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sudoku Puzzle</title>
+        <meta charset="UTF-8">
+        <style>
+            .sudoku-board { border-spacing: 0; margin-left: auto; margin-right: auto; }
+            .sudoku-board th { padding: .5em; }
+            .sudoku-board td { border: 1px solid; width: 2em; height: 2em; text-align: center;}
+            .sudoku-board .box { background: rgb(143, 247, 134); }
+        </style>
+    </head>
+    <body>
+        <div style="text-align:center">
+            <p style="align-content: center;"><b><u>SUDOKU PUZZLE</u></b></p>
+        </div>
+        <p>Note:</p>
+        <ul style="list-style-type:disc;">
+        <li>To fill/edit a box with a number, click on it and enter a number(1-9).</li>
+        <li>The dark green coloured boxes are the ones filled by the puzzle, they cannot be edited.</li>
+        <li>Numbers given as hints are coloured in yellow. Maximum 5 hints can be used.</li>
+        <li>If the sudoku gets correctly solved, the user will be prompted.</li>    
+    </ul>
+        <label>Choose a mode:</label>
+        <select name="mode" id="mode">
+        <option value="easy">Easy</option>
+        <option value="medium">Standard</option>
+        <option value="hard">Expert</option>
+        </select>
+        <button onClick="GetSelectedItem('mode');">Set Puzzle</button>
+        <table class="sudoku-board">
+            <tbody>
+                <tr>
+                    <td class="box" id="a91"></td>
+                    <td class="box" id="a92"></td>
+                    <td class="box" id="a93" style="border-right-width: 3px;"></td>
+                    <td class="box" id="a94"></td>
+                    <td class="box" id="a95"></td>
+                    <td class="box" id="a96" style="border-right-width: 3px;"></td>
+                    <td class="box" id="a97"></td>
+                    <td class="box" id="a98"></td>
+                    <td class="box"id="a99"></td>
+                </tr>
+                <tr>
+                    <td class="box" id="a81"></td>
+                    <td class="box" id="a82"></td>
+                    <td class="box" id="a83" style="border-right-width: 3px;"></td>
+                    <td class="box" id="a84"></td>
+                    <td class="box" id="a85"></td>
+                    <td class="box" id="a86" style="border-right-width: 3px;"></td>
+                    <td class="box" id="a87"></td>
+                    <td class="box" id="a88"></td>
+                    <td class="box" id="a89"></td>
+                </tr>
+                <tr>
+                    <td class="box" id="a71"></td>
+                    <td class="box" id="a72"></td>
+                    <td class="box" id="a73" style="border-right-width: 3px;"></td>
+                    <td class="box" id="a74"></td>
+                    <td class="box" id="a75"></td>
+                    <td class="box" id="a76" style="border-right-width: 3px;"></td>
+                    <td class="box" id="a77"></td>
+                    <td class="box" id="a78"></td>
+                    <td class="box" id="a79"></td>
+                </tr>
+                <tr>
+                    <td class="box" id="a61" style="border-top-width: 3px;"></td>
+                    <td class="box" id="a62" style="border-top-width: 3px;"></td>
+                    <td class="box" id="a63" style="border-right-width: 3px; border-top-width: 3px; "></td>
+                    <td class="box" id="a64" style="border-top-width: 3px;"></td>
+                    <td class="box" id="a65" style="border-top-width: 3px;"></td>
+                    <td class="box" id="a66" style="border-right-width: 3px; border-top-width: 3px; "></td>
+                    <td class="box" id="a67" style="border-top-width: 3px;"></td>
+                    <td class="box" id="a68" style="border-top-width: 3px;"></td>
+                    <td class="box" id="a69" style="border-top-width: 3px;"></td>
+                </tr>
+                <tr>
+                    <td class="box" id="a51"></td>
+                    <td class="box" id="a52"></td>
+                    <td class="box" id="a53" style="border-right-width: 3px;"></td>
+                    <td class="box" id="a54"></td>
+                    <td class="box" id="a55"></td>
+                    <td class="box" id="a56" style="border-right-width: 3px;"></td>
+                    <td class="box" id="a57"></td>
+                    <td class="box" id="a58"></td>
+                    <td class="box" id="a59"></td>
+                </tr>
+                <tr>
+                    <td class="box" id="a41"></td>
+                    <td class="box" id="a42"></td>
+                    <td class="box" id="a43" style="border-right-width: 3px;"></td>
+                    <td class="box" id="a44"></td>
+                    <td class="box" id="a45"></td>
+                    <td class="box" id="a46" style="border-right-width: 3px;"></td>
+                    <td class="box" id="a47"></td>
+                    <td class="box" id="a48"></td>
+                    <td class="box" id="a49"></td>
+                </tr>
+                <tr>
+                    <td class="box" id="a31" style="border-top-width: 3px;"></td>
+                    <td class="box" id="a32" style="border-top-width: 3px;"></td>
+                    <td class="box" id="a33" style="border-right-width: 3px; border-top-width: 3px; "></td>
+                    <td class="box" id="a34" style="border-top-width: 3px;"></td>
+                    <td class="box" id="a35" style="border-top-width: 3px;"></td>
+                    <td class="box" id="a36" style="border-right-width: 3px; border-top-width: 3px; "></td>
+                    <td class="box" id="a37" style="border-top-width: 3px;"></td>
+                    <td class="box" id="a38" style="border-top-width: 3px;"></td>
+                    <td class="box" id="a39" style="border-top-width: 3px;"></td>
+                </tr>
+                <tr>
+                    <td class="box" id="a21"></td>
+                    <td class="box" id="a22"></td>
+                    <td class="box" id="a23" style="border-right-width: 3px;"></td>
+                    <td class="box" id="a24"></td>
+                    <td class="box" id="a25"></td>
+                    <td class="box" id="a26" style="border-right-width: 3px;"></td>
+                    <td class="box" id="a27"></td>
+                    <td class="box" id="a28"></td>
+                    <td class="box" id="a29"></td>
+                </tr>
+                <tr>
+                    <td class="box" id="a11"></td>
+                    <td class="box" id="a12"></td>
+                    <td class="box" id="a13" style="border-right-width: 3px;"></td>
+                    <td class="box" id="a14"></td>
+                    <td class="box" id="a15"></td>
+                    <td class="box" id="a16" style="border-right-width: 3px;"></td>
+                    <td class="box" id="a17"></td>
+                    <td class="box" id="a18"></td>
+                    <td class="box" id="a19"></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <div style="text-align:center">
+            <button type="button" onclick="sudokuHint()">GET HINT</button><p id="availableHints">Available Hints :5</p>
+            <button type="button" onclick="printSudoku()" style="flex: auto;">GO TO SOLUTION</button>
+          </div>
+        <script src="script.js">
+        </script>
+        <footer>
+            <p>Web Page Author: Abhishek Yelne</p>
+            <p>Email:<a href="mailto:abhiyel12@gmail.com">abhiyel12@gmail.com</a></p>
+          </footer>
+    </body>
+</html>
