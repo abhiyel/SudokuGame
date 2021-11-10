@@ -3,23 +3,21 @@
     <head>
         <title>Sudoku Puzzle</title>
         <meta charset="UTF-8">
-        <style>
-            .sudoku-board { border-spacing: 0; margin-left: auto; margin-right: auto; }
-            .sudoku-board th { padding: .5em; }
-            .sudoku-board td { border: 1px solid; width: 2em; height: 2em; text-align: center;}
-            .sudoku-board .box { background: rgb(143, 247, 134); }
-        </style>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div style="text-align:center">
             <p style="align-content: center;"><b><u>SUDOKU PUZZLE</u></b></p>
         </div>
-        <p>Note:</p>
+        <p>Rules:</p>
         <ul style="list-style-type:disc;">
-        <li>To fill/edit a box with a number, click on it and enter a number(1-9).</li>
+        <li>Each row and each column of the 9x9 grid should contain all the integers ranging from 1 to 9(no integer should be repeated in a row or a column.</li>
+        <li>All the smaller 3x3 grids should also contain all integers from 1 to 9</li>
+        <li>To fill/edit a box with a number, click on it and enter a number(1-9) in the prompt that gets popped up.</li>
         <li>The dark green coloured boxes are the ones filled by the puzzle, they cannot be edited.</li>
         <li>Numbers given as hints are coloured in yellow. Maximum 5 hints can be used.</li>
-        <li>If the sudoku gets correctly solved, the user will be prompted.</li>    
+        <li>If the sudoku gets correctly solved, the user will be prompted.</li>
+        <li>To start the puzzle, choose a mode and click on 'set puzzle'.</li>    
     </ul>
         <label>Choose a mode:</label>
         <select name="mode" id="mode">

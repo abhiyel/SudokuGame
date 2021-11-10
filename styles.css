@@ -1,0 +1,7 @@
+.sudoku-board { border-spacing: 0; margin-left: auto; margin-right: auto; }
+            
+.sudoku-board th { padding: .5em; }
+            
+.sudoku-board td { border: 1px solid; width: 2em; height: 2em; text-align: center;}
+            
+.sudoku-board .box { background: rgb(143, 247, 134); }
